@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Convertor</title>
+</head>
+<body>
+	<h1>Temperature Convertor</h1>
+	<div id="boxcontainer1">
+		
+		<input type="number“" name="temp" id="temp_value" placeholder="Enter the Temperature">
+		<br><br><br>
+		<input type="radio" name="temp" id="ctf"><label for="ctf" name="ctf">Celecius to farenhiet</label>
+		<br><br>
+		<input type="radio" name="temp" id="ftc"><label for="ftc">farenhiet to celecius</label>
+		<br><br><br>
+		<input type="button" id="btn" value="Get" onclick="tempget()">
+		<p id="boxcontainer2"></p>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
