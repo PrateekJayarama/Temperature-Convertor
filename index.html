@@ -12,9 +12,14 @@
 		
 		<input type="number“" name="temp" id="temp_value" placeholder="Enter the Temperature">
 		<br><br><br>
-		<input type="radio" name="temp" id="ctf"><label for="ctf" name="ctf">Celecius to farenhiet</label>
-		<br><br>
-		<input type="radio" name="temp" id="ftc"><label for="ftc">farenhiet to celecius</label>
+		<select name="convert" id="temp_unit">
+			<option value="ctf">Celcius to farenhiet</option>
+			<option value="ftc">farenhiet to Celcius</option>
+			<option value="ktc">Kelvin to Celsius</option>
+			<option value="ctk">Celsius to Kelvin</option>
+			<option value="ftk">Farenhiet to Kelvin</option>
+			<option value="ktf">Kelvin to Farenhiet</option>
+		</select>
 		<br><br><br>
 		<input type="button" id="btn" value="Get" onclick="tempget()">
 		<p id="boxcontainer2"></p>
