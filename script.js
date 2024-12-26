@@ -11,23 +11,32 @@ function tempget() {
     const temp = parseFloat(tempValue);
     let convertedTemp;
 
-    if (tempUnit === "ctf") {
-        convertedTemp = (temp * 9/5) + 32;
-        result.textContent = `${convertedTemp.toFixed(2)}°F`;
-    } else if (tempUnit === "ftc") {
-        convertedTemp = (temp - 32) * 5/9;
-        result.textContent = `${convertedTemp.toFixed(2)}°C`;
-    } else if (tempUnit === "ktc") {
-        convertedTemp = temp - 273.15;
-        result.textContent = `${convertedTemp.toFixed(2)}°C`;
-    } else if (tempUnit === "ctk") {
-        convertedTemp = temp + 273.15;
-        result.textContent = `${convertedTemp.toFixed(2)}K`;
-    } else if (tempUnit === "ftk") {
-        convertedTemp = (temp - 32) * 5/9 + 273.15;
-        result.textContent = `${convertedTemp.toFixed(2)}K`;
-    } else if (tempUnit === "ktf") {
-        convertedTemp = (temp - 273.15) * 9/5 + 32;
-        result.textContent = `${convertedTemp.toFixed(2)}°F`;
+    switch (tempUnit) {
+        case "ctf": // Celsius to Fahrenheit
+            convertedTemp = (temp * 9/5) + 32;
+            result.textContent = `${convertedTemp.toFixed(2)}°F`;
+            break;
+        case "ftc": // Fahrenheit to Celsius
+            convertedTemp = (temp - 32) * 5/9;
+            result.textContent = `${convertedTemp.toFixed(2)}°C`;
+            break;
+        case "ktc": // Kelvin to Celsius
+            convertedTemp = temp - 273.15;
+            result.textContent = `${convertedTemp.toFixed(2)}°C`;
+            break;
+        case "ctk": // Celsius to Kelvin
+            convertedTemp = temp + 273.15;
+            result.textContent = `${convertedTemp.toFixed(2)}K`;
+            break;
+        case "ftk": // Fahrenheit to Kelvin
+            convertedTemp = (temp - 32) * 5/9 + 273.15;
+            result.textContent = `${convertedTemp.toFixed(2)}K`;
+            break;
+        case "ktf": // Kelvin to Fahrenheit
+            convertedTemp = (temp - 273.15) * 9/5 + 32;
+            result.textContent = `${convertedTemp.toFixed(2)}°F`;
+            break;
+        default:
+            result.textContent = "Invalid temperature unit.";
     }
 }
