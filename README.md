@@ -1,10 +1,5 @@
 # Temperature-Convertor
 
-This is temperature convertion web application where we convert °C to °F and °F to °C.
+The Temperature Converter is a simple web-based tool for converting temperatures between Celsius, Fahrenheit, and Kelvin. Users can input a temperature value and select the unit of measurement, and the tool will provide the converted temperature in the desired unit.
 
-# °F to °C
-![Screenshot 2024-12-12 145351](https://github.com/user-attachments/assets/eab7cc20-0a61-46a1-b0ba-28c668e75785)
-
-# °C to °F
-![Screenshot 2024-12-12 145402](https://github.com/user-attachments/assets/e7b3e2ce-da2b-49fd-9ca6-696e33dea558)
 
